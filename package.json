@@ -1,0 +1,27 @@
+{
+  "name": "firstexpressapp",
+  "version": "1.0.0",
+  "description": "My first express app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mxfoyster/FirstExpressApp.git"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "rest"
+  ],
+  "author": "Mark Foyster",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/mxfoyster/FirstExpressApp/issues"
+  },
+  "homepage": "https://github.com/mxfoyster/FirstExpressApp#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
