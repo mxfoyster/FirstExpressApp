@@ -1,0 +1,3 @@
+/* This is the css file where I can override any styles I wish to from bootstrap */
+.carousel .carousel-indicators button{background-color:aquamarine;}
+.carousel .carousel-indicators button.active {background-color:deeppink;}
