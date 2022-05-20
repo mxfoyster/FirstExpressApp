@@ -1,18 +1,22 @@
+//- 
+    If the filename is 'index', it will use '/' for the href which is
+    the correct route for this in my route.js
+    otherwise it will use the filename as the href.
+    If 'file' (the current file being rendered, passed from routes.pugRoutes function on render) 
+    is the same as 'fileName', class of 'selected' is added to anchor tag (highlights tag)  
+
+mixin menuItem(fileName, menuLabel)
+    if fileName == 'index'
+        a(class={selected: file == fileName} href="/") INDEX
+    else
+        a(class={selected: file == fileName} href=fileName)= menuLabel
+
 <nav>
-if file == 'index' 
-    a.selected(href="/") INDEX
-else 
-    a(href="/") INDEX
++menuItem("index", "INDEX")
 
-if file == 'rest.pug' 
-    a.selected(href="rest.pug") REST API
-else 
-    a(href="rest.pug") REST API
-    
-if file == 'bootstrap.pug' 
-    a.selected(href="bootstrap.pug") BOOTSTRAP
-else 
-    a(href="bootstrap.pug") BOOTSTRAP 
++menuItem("rest.pug", "REST API")
 
-a(href="links.html") LINKS
++menuItem("bootstrap.pug", "BOOTSTRAP")
+
++menuItem("links.html", "LINKS")
 </nav>
