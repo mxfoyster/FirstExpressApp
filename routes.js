@@ -1,5 +1,6 @@
 //node modules
 const nodePath = require('path');
+//const bodyParser = require('body-parser');
 const fs = require('fs')
 
 
@@ -25,26 +26,27 @@ function pugRoutes(req, res, next){
  }
 
 //Routes for my REST demo
- function restRoutes(app){ 
-//Review
-app.get('/data', (req, res) => {
-    res.send('hello world');
- });
- 
- //Create
- app.post('/data', (req, res) => {
-     res.send('Got a POST request');
- });
- 
- //Update
- app.put('/data', (req, res) => {
-     res.send('Got a PUT request at /user')
- });
- 
- //Delete
- app.delete('/data', (req, res) => {
-     res.send('Got a DELETE request at /user')
- });
+ function restRoutes(app, express){ 
+    app.use(express.json()); //without this, Express won't import body at all!
+    //Review (Has to be query, no body!)
+    app.get('/data', (req, res) => {
+        res.send("Getting (Review): " + req.query.data);
+    });
+    
+    //Create (All the rest, we can look at our body)
+    app.post('/data', (req, res) => {
+        res.send("Posting (Create): " + req.body.data);
+    });
+    
+    //Update
+    app.put('/data', (req, res) => {
+        res.send("Putting (Update): " + req.body.data);
+    });
+    
+    //Delete
+    app.delete('/data', (req, res) => {
+        res.send("Deleting: " + req.body.data);
+    });
  }
 
  module.exports = {pugRoutes, restRoutes};

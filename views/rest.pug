@@ -18,26 +18,27 @@ html(lang="en")
 
                 p This is a learning exercise, not all will be perfect. I will refine it all over time until I'm happy.
                 br
+                p We will start by justgetting a very basic response from the server when we submit data from a form.
                 br
                 .restBox
                     .form
                         label(for='getter') Get a response: 
-                        input(type='text' name='getter' autofocus)
+                        input#getInputBox(type='text' name='getter' autofocus)
                         button#get(type="submit") SUBMIT
                         br
                         br
                         label(for='putter') Put a response: 
-                        input(type='text' name='putter' autofocus)
+                        input#putInputBox(type='text' name='putter' autofocus)
                         button#put(type="submit") SUBMIT
                         br
                         br
                         label(for='poster') Post a response: 
-                        input(type='text' name='poster' autofocus)
+                        input#postInputBox(type='text' name='poster' autofocus)
                         button#post(type="submit") SUBMIT
                         br
                         br
                         label(for='deleter') Delete response: 
-                        input(type='text' name='deleter' autofocus)
+                        input#deleteInputBox(type='text' name='deleter' autofocus)
                         button#delete(type="submit") SUBMIT
                         br
                         br
