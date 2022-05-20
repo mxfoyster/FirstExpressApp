@@ -1,0 +1,30 @@
+.restBox{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form{
+    flex-wrap: wrap;
+	flex-grow: 0;
+    text-align: right;
+}
+
+.responseWindow{
+    background-color:black;
+    border-style: groove;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.responseWindow > h4{
+    line-height: 1rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    color:bisque;
+}
+
+#responseContent{
+    padding:5px;
+    color:aqua;
+}

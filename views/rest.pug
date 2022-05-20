@@ -5,16 +5,44 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel='stylesheet', type='text/css', href='css/style.css')
+        link(rel='stylesheet', type='text/css', href='css/rest.css')
+        script(src="js/restClient.js" defer) 
         title Node.js &amp; Express.js
     body 
         .grid-container
             include includes/header.pug
             .middle 
                 hr
-                h3 PUG
-                p For this project, I am using Node.js and Express.js.
+                h3 REST
+                p This page will test my routes to <b>GET</b>, <b>POST</b>, <b>PUT</b> and <b>DELETE</b>. I have used a separate function within the route.js file that I have extracted the bulk of my routing functions into.
+
                 p This is a learning exercise, not all will be perfect. I will refine it all over time until I'm happy.
                 br
                 br
-                
+                .restBox
+                    .form
+                        label(for='getter') Get a response: 
+                        input(type='text' name='getter' autofocus)
+                        button#get(type="submit") SUBMIT
+                        br
+                        br
+                        label(for='putter') Put a response: 
+                        input(type='text' name='putter' autofocus)
+                        button#put(type="submit") SUBMIT
+                        br
+                        br
+                        label(for='poster') Post a response: 
+                        input(type='text' name='poster' autofocus)
+                        button#post(type="submit") SUBMIT
+                        br
+                        br
+                        label(for='deleter') Delete response: 
+                        input(type='text' name='deleter' autofocus)
+                        button#delete(type="submit") SUBMIT
+                        br
+                        br
+                    .responseWindow 
+                        h4 Response from server:
+                        #responseContent
+
             include includes/footer.pug
