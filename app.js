@@ -1,29 +1,22 @@
+//express modules
 const express = require('express');
+
+//my modules
+const routes = require('./routes'); 
+
 const app = express();
 const port = process.env.PORT ||3000;
 
-// respond with "hello world" when a GET request is made to the homepage
-app.use(express.static('public'))
+//pug pages
+app.set('view engine', 'pug');
+app.locals.pretty = true; //format rendered html neatly
+app.use(routes.pugRoutes);
 
-//Review
-app.get('/data', (req, res) => {
-   res.send('hello world');
-});
+// static pages using just express
+app.use(express.static('public'));
 
-//Create
-app.post('/data', (req, res) => {
-    res.send('Got a POST request');
-});
-
-//Update
-app.put('/data', (req, res) => {
-    res.send('Got a PUT request at /user')
-});
-
-//Delete
-app.delete('/data', (req, res) => {
-    res.send('Got a DELETE request at /user')
-});
+//our REST routes
+routes.restRoutes(app);
 
 //lets handle our error pages
 app.use( (req, res) => {
