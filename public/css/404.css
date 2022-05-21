@@ -1,0 +1,73 @@
+body 
+{
+	font-family: Arial, Helvetica, sans-serif;
+	/*background-image: url("../images/bkg.jpg");*/
+    color: darkblue;
+	width: 80%;
+	margin: auto;
+}
+
+
+.header{
+	display: block;
+    text-align: center;
+	flex-wrap: wrap;
+    margin: auto;
+	
+}
+
+.middle{
+	display: block;
+}
+
+.footer{
+	text-align: center;
+	display: block;
+    margin: auto;
+}
+
+.sub{
+	font-size: 0.8rem;
+}
+
+.sadFace
+{
+	display:block;
+	margin: auto;
+}
+.sadFaceSml
+{
+	display: none;
+	margin: auto;
+}
+
+.red{
+	color:red;
+}
+
+.sadWarning{
+	text-align: center;
+}
+
+
+@media (max-width: 800px){
+    body{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 650px){
+   
+	.sadFace{
+        display: none;
+    }
+
+    .sadFaceSml{
+        display: block;
+    }
+    
+    p{
+        padding: 5px;
+    }
+}

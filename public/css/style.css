@@ -30,10 +30,6 @@ nav > a{
 	color:white;
 }
 
-.selected{
-	color:red;
-}
-
 .header{
 	display: flex;
 	flex-wrap: wrap;
@@ -47,11 +43,14 @@ nav > a{
 .rightHeader > h1{
 	text-align: center;
 	line-height: 0.6em;
+	font-size: 2.5rem;
 }
 
 .rightHeader > h3{
 	text-align: center;
 	line-height: 0.6em;
+	font-size: 2rem;
+
 }
 
 .middle{
@@ -100,4 +99,13 @@ nav > a{
 		display: block;
 		float: none;
 	}
+
+	.rightHeader > h1{
+		font-size: 1.6rem;
+		line-height: 1.4rem;
+	}
+	h3.red{
+		font-size: 1.2rem;
+	}
+
 }

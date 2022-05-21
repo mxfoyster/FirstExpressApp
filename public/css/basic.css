@@ -1,0 +1,10 @@
+body 
+{
+	font-family: Arial, Helvetica, sans-serif;
+	width: 80%;
+	margin: auto;
+}
+
+.mainContainer{
+    background-color:beige;
+}
