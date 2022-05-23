@@ -109,3 +109,13 @@ nav > a{
 	}
 
 }
+
+@media (max-width: 825px){
+	body{
+		width: 94%;
+	}
+
+	.leftHeader{
+		margin:auto;
+	}
+}

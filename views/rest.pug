@@ -19,7 +19,8 @@ html(lang="en")
 
                 p This is a learning exercise, not all will be perfect. I will refine it all over time until I'm happy.
                 br
-                p We will start by justgetting a very basic response from the server when we submit data from a form.
+                h4 Basic Requests &amp; Responses
+                p We will start by just getting a very basic response from the server when we submit data from a form.
                 br
                 .restBox
                     .form
@@ -46,5 +47,6 @@ html(lang="en")
                     .responseWindow 
                         h4 Response from server:
                         #responseContent
-
+                p To prevent a reload, the buttons are monitored by <b><i>JavaScript</i></b> listeners. When pressed, the <b><i>Fetch()</i></b> api is used to sent a pre-prepared <b><i>JSON</i></b> header to the server. The method (GET, PUT, POST or DELETE) is embedded within the JSON which when recieved by <b>EXPRESS</b> is routed accordingly.  
+                p For the <b>GET</b> request, the input box text is sent via a query in the url. This is because GET does not have a body within which to sent anything to the server. For <b>PUT</b>, <b>POST</b> and <b>DELETE</b> responses, the body can be used to send the data in a name - value pair.
             include includes/footer.pug

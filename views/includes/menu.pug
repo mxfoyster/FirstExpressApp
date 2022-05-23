@@ -7,12 +7,12 @@
 
 mixin menuItem(fileName, menuLabel)
     if fileName == 'index'
-        a.button1(class={selected: file == fileName} href="/") INDEX
+        a.button1(class={selected: file == fileName} href="/")= menuLabel
     else
         a.button1(class={selected: file == fileName} href=fileName)= menuLabel
 
 <nav class="buttons">
-+menuItem("index", "INDEX")
++menuItem("index", "HOME")
 
 +menuItem("rest.pug", "REST API")
 
