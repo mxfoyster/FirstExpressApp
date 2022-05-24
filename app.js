@@ -12,6 +12,7 @@ const port = process.env.PORT ||3000;
 app.set('view engine', 'pug');
 app.locals.pretty = true; //format rendered html neatly
 app.use(routes.pugRoutes);
+//app.use(routes.expressDemoRoutes);
 
 // static pages using just express
 app.use(express.static('public'));

@@ -1,3 +1,7 @@
+:root{
+	--topAnchorOffset: -200px;
+	--boxedElementsColor: rgb(126, 228, 126); /*rgba(247, 255, 247, 0.8; */
+}
 @font-face {
 	font-family: roboto-normal;
 	src: url('../fonts/Roboto-Black.ttf');
@@ -12,7 +16,6 @@
 body 
 {
 	font-family: Arial, Helvetica, sans-serif;
-	width: 80%;
 	margin: auto;
 }
 
@@ -37,10 +40,6 @@ ul li::before {
 	margin-left: -1em; /* needed for space */
   }
 
-.grid-container{
-	display: grid;
-}
-
 nav{
 	display: flex;
 	flex-wrap: wrap;
@@ -62,7 +61,7 @@ nav > a{
 
 .header{
 	display: flex;
-	/* position: fixed; */
+	padding-bottom: 1rem;
 	flex-wrap: wrap;
 	
 }
@@ -71,9 +70,10 @@ nav > a{
 	position: sticky; 
 	width:100%;
 	top: 10px;
-	background-color: rgb(237, 255, 237);
+	background-color: var(--boxedElementsColor);
 	border-radius: 30px;
 	box-shadow: 0 0 10px 10px rgba(247, 255, 247, 0.8) inset;
+	z-index: 2;
 }
 
 .leftHeader{
@@ -82,6 +82,7 @@ nav > a{
 
 .rightHeader{
 	margin: auto;
+	text-align: center;
 }
 
 .rightHeader > h3{
@@ -106,7 +107,6 @@ nav > a{
 	color:blue;
 }
 
-
 .sub{
 	font-size: 0.8rem;
 }
@@ -130,10 +130,6 @@ nav > a{
 	
 }
 
-/* .intro > p{
-	padding-right: 10px;
-} */
-
 /*------------- Skills section styles --------------------*/
 .skills{
 	display: block;
@@ -141,20 +137,20 @@ nav > a{
 }
 
 
-.skills > div > ul{
+.skillsUl{
 	display: inline-block;
-	/* position: relative; */
+	position: relative;
 	font-size: 1.2rem;
 	color: blue;
-	background-color:rgb(237, 255, 237);
+	background-color:var(--boxedElementsColor);
 	border-radius: 10px;
 	border-style: ridge;
-	/* transform: translateX(50%); */
+	left: 40vw;
+	transform: translatex(-50%);
+	padding: 1rem;
+	padding-left: 2rem;
+	z-index: 0;
 }
-
-/* .skills > div > ul > li{
-	text-align: center;
-} */
 
 .bkgMouse{
 	display: block;
@@ -164,10 +160,17 @@ nav > a{
 	height: 230px;
 }
 
+#skills{
+	display: block;
+    position: relative;
+    top: var(--topAnchorOffset);
+    visibility: hidden;
+}
+
 /*------------ Education section styles -----------------*/
 
 .boxed{
-	background-color:rgb(237, 255, 237);
+	background-color:var(--boxedElementsColor);
 	border-radius: 10px;
 	border-style: ridge;
 	padding: 5px;
@@ -177,6 +180,13 @@ nav > a{
 .boxed > h4{
 	color: red;
 	padding-left: 10px;
+}
+
+#education{
+	display: block;
+    position: relative;
+    top: var(--topAnchorOffset);
+    visibility: hidden;
 }
 
 /*--------------- Bio section styles --------------------*/
@@ -193,7 +203,24 @@ nav > a{
 	height: 342px;
 }
 
-/*--------------- Styles for headings ------------------*/
+/*--------------- Links section styles --------------------*/
+.boxedLink{
+	display: inline-block;
+	position: relative;
+	font-size: 1.2rem;
+	color: blue;
+	background-color:var(--boxedElementsColor);
+	border-radius: 10px;
+	border-style: ridge;
+	left: 30vw;
+	transform: translatex(-50%);
+	
+	padding-left: 1rem;
+	padding-right: 1rem;
+	z-index: 0;
+}
+
+/*--------------- Styles for headings ---------------------*/
 .headings{
 	font-family: roboto-normal;
 	color: rgb(83, 51, 229);
@@ -215,8 +242,20 @@ nav > a{
 @media (min-width: 800px) {
 	body{
 		background-image: url(../images/dotmatrixbackgroundfaded.png);
-		background-size: 100%;
-		/* opacity: 0.5; */
+		background-size:100%;
+		width:90vw;
+		margin:auto;
+	}
+	.main-container{
+		width:90%;
+		margin:auto;
+	}
+}
+
+
+@media (min-width: 1100px) {
+	.main-container{
+		width: 80%;
 	}
 	.bkgPortrait{
 		float: left;
@@ -234,12 +273,12 @@ nav > a{
 	.skills > p{
 		margin-left: 340px; 
 	}
-	.skills >div > ul{
-		margin-left: 360px;
-		padding: 1rem;
-		padding-left: 2rem;
+	.skillsUlNrImage{
+		left: calc(40vw - 300px);
+		transform: translatex(-50%);
 	}
 }
+
 
 @media (max-width: 1000px){
 	
