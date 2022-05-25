@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
+    
+    <title>Simple vanilla Node.js webserver</title>
+</head>
+<body>
+<div class="grid-container">
+    <div class="header">
+    
+        <div class="leftHeader"><img src="./images/nodelogo.png" class="nodeLogo" alt="Node Logo"></div>
+    
+        <div class="rightHeader">
+            <h3 class="red">Building A</h3>
+            <h1>Simple Node.js HTTP server</h1>
+            <nav><a class="selected" href="./" >HOME</a><a href="code.html">THE CODE</a><a href="more.html">OTHER STUFF</a><a href="links.html">LINKS</a></nav>
+        </div>
+    </div>
+    </div><!--end of header-->
+    
+    <hr>
+
+    <div class="middle">
+    
+    <h3>Introduction</h3>
+    <p>A simple http server written in Node.js. It uses only the bult in modules (NOT Express.js, etc !)</p>
+    <p>This is an exercise to understand the basics before progressing to use Express.js or other frameworks / API's.</p>
+    
+    <div class="lowerMiddle">
+        <iframe width="560" height="315" class="vidFrame" src="https://www.youtube.com/embed/fBNz5xF-Kx4" title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <div>
+        <h3>Inspiration</h3>
+        <p>The code for the most part is from the following YouTube tutorial from Traversy Media:</p> 
+        <p>In my opinion, this is one of the best videos of it's type online. It goes into detail and makes it easy to understand the core 
+        principles behind the code. Most videos just start using Express straight away but I do like to understand the inner workings BEFORE 
+        I use external modules, libraries etc.</p>
+        <h3>What is node?</h3>
+        <p><b>Node.js</b> is a server side runtime environment that allows us to use the v8 engine used within <i>Google Chrome</i> to run 
+        JavaScript on the server. This is pretty neat as we can use the same language we use to manipulate the DOM on the client machine to 
+        manipulate the data and respond to the client requests on the server. A one language, full stack solution.</p>
+        <p>Further more, it's asynchronous (non-blocking) which not only makes it efficient and fast but makes it easy to scale up and adapt to 
+        changes in demand.</p>
+        </div>
+    </div><!--end of lower middle container--> 
+    <br><br>
+    </div><!--end of middle-->
+    
+    <div class="footer">
+    <hr>
+    <p>Mark Foyster May 2022</p>
+    </div><!--end of footer-->
+</div><!--End of grid container-->
+
+    
+</body>
+</html>

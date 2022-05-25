@@ -12,13 +12,19 @@ const port = process.env.PORT ||3000;
 app.set('view engine', 'pug');
 app.locals.pretty = true; //format rendered html neatly
 app.use(routes.pugRoutes);
-//app.use(routes.expressDemoRoutes);
+
+//our REST routes
+routes.restRoutes(app, express);
 
 // static pages using just express
 app.use(express.static('public'));
 
-//our REST routes
-routes.restRoutes(app, express);
+//static routing for justnode 
+app.use("/justnode", express.static(__dirname + "/justnode"));
+
+//static routing for express demo
+app.use("/express", express.static(__dirname + "/express"));
+
 
 //lets handle our error pages
 app.use( (req, res) => {

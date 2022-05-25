@@ -12,11 +12,11 @@ mixin menuItem(fileName, menuLabel)
         a.button1(class={selected: file == fileName} href=fileName)= menuLabel
 
 <nav class="buttons">
-+menuItem("index", "HOME")
++menuItem("/express/", "HOME")
 
-+menuItem("rest.pug", "REST API")
++menuItem("/express/rest", "REST API")
 
-+menuItem("bootstrap.pug", "BOOTSTRAP")
++menuItem("/express/bootstrap", "BOOTSTRAP")
 
-+menuItem("links.html", "LINKS")
++menuItem("/express/links", "LINKS")
 </nav>

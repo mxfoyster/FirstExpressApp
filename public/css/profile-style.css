@@ -1,6 +1,6 @@
 :root{
 	--topAnchorOffset: -200px;
-	--boxedElementsColor: rgb(126, 228, 126); /*rgba(247, 255, 247, 0.8; */
+	--boxedElementsColor: rgb(216, 217, 241); /*rgba(247, 255, 247, 0.8; */
 }
 @font-face {
 	font-family: roboto-normal;
@@ -115,6 +115,17 @@ nav > a{
 	color:red;
 }
 
+.green{
+	color:darkgreen;
+}
+
+.flexContainer{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: space-evenly;
+}
+
 /*-------------- Intro section styles -------------------*/
 .intro{
 	display: block;
@@ -178,7 +189,7 @@ nav > a{
 }
 
 .boxed > h4{
-	color: red;
+	color: darkgreen;
 	padding-left: 10px;
 }
 
@@ -206,15 +217,11 @@ nav > a{
 /*--------------- Links section styles --------------------*/
 .boxedLink{
 	display: inline-block;
-	position: relative;
 	font-size: 1.2rem;
 	color: blue;
 	background-color:var(--boxedElementsColor);
 	border-radius: 10px;
 	border-style: ridge;
-	left: 30vw;
-	transform: translatex(-50%);
-	
 	padding-left: 1rem;
 	padding-right: 1rem;
 	z-index: 0;

@@ -11,21 +11,36 @@ function pugRoutes(req, res, next){
     let extName = nodePath.extname(thisPath);
     let thisFile = nodePath.basename(thisPath);
     //if it's a .pug file AND it exists, load it
-    if (thisPath == '/express'){
-        res.render('express/index.pug', {file: 'index'});
-        return;
-    }
-    else if (extName == ".pug"){
+   if (extName == ".pug"){
         if (fs.existsSync("views" + thisPath)){
             res.render(thisFile, {file: thisFile});
             return; //exit routing
             }
     }
-    //if root url, load index
-    else if(thisPath == '/'){
+    
+    else 
+    //check the rest
+    switch (thisPath){
+        case '/':   //if root url, load index
         res.render('index', {file: 'index'});
         return; //exit routing
-    }
+    //our express demo routes
+        case '/express/rest':
+            res.render('express/rest.pug', {file: "/express/rest"});
+            return;    
+        case '/express/bootstrap':
+            res.render('express/bootstrap.pug', {file: "/express/bootstrap"});
+            return;
+        case '/express/links':
+            res.render('express/links.pug', {file: "/express/links"});
+            return;        
+        case '/express':
+        case '/express/':
+            res.render('express/index.pug', {file: "/express/"});
+            return;
+           
+    }       
+   
     next(); //no matches found, will continue looking!!
  }
 
@@ -53,28 +68,7 @@ function pugRoutes(req, res, next){
     });
  }
 
- //Routes for Node & express demo
- function expressDemoRoutes(req,res, next)
- {
-    let thisPath = req.path;
-    let extName = nodePath.extname(thisPath);
-    let thisFile = nodePath.basename(thisPath);
-    //if it's a .pug file AND it exists, load it
-    console.log(thisFile, {file: thisFile});
-    res.render('profile.pug');
-    return;
-    // if (extName == ".pug"){
-    //     if (fs.existsSync("views" + thisPath)){
-    //         res.render(thisFile, {file: thisFile});
-    //         return; //exit routing
-    //         }
-    // }
-    // //if root url, load index
-    // else if(thisPath == '/'){
-    //     res.render('index', {file: 'index'});
-    //     return; //exit routing
-    // }
-    next(); //no matches found, will continue looking!!
- }
+ function expressDemoRoutes(){
 
- module.exports = {pugRoutes, restRoutes, expressDemoRoutes};
+ }
+ module.exports = {pugRoutes, restRoutes};
