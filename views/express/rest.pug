@@ -8,6 +8,9 @@ html(lang="en")
         link(rel='stylesheet', type='text/css', href='css/buttons.css')
         link(rel='stylesheet', type='text/css', href='css/rest.css')
         script(src="js/restClient.js" defer) 
+        link(rel="stylesheet" href="highlight/darcula.min.css")
+        script(src="highlight/highlight.min.js")
+        script hljs.highlightAll();
         title Node.js &amp; Express.js
     body 
         .grid-container
@@ -15,12 +18,38 @@ html(lang="en")
             .middle 
                 hr
                 h3 REST
-                p This page will test my routes to <b>GET</b>, <b>POST</b>, <b>PUT</b> and <b>DELETE</b>. I have used a separate function within the route.js file that I have extracted the bulk of my routing functions into.
+                p Welcome to my REST demo. This is an educational exercise for myself but maybe it could help someone else on the same journey. I will start with some background and then gradually introduce some working examples with code. 
 
-                p This is a learning exercise, not all will be perfect. I will refine it all over time until I'm happy.
-                br
+                p So, what is <B>REST</B>? Rest is REpresentational State Transfer. It's safe to say that without elaboration, that does not tell us much. However, we can elaborate by considering the 6 principles of REST. Below, I will discuss these principles and how we can apply them to <i>Node.js</i> and <i>Express</i> as well as I can from my understanding so far. 
+                ol 
+                    li 
+                    h4 Client Server Architecture
+                    p This can be described crudely as keeping the client side code separate from the Server side. By using the http GET, PUT, POST and DELETE methods to communicate with the server and control the transmission of data both ways, we have a standardised format which we can adhere to. If we have to make changes to either the server side or the client side software, the abstraction provided by this protocol means we can do so with low risk of causing problems with the other. 
+                    
+                    li 
+                    h4 Stateless
+                    p This simply means that when a request is made, it will not be denied because of some state set up elsewhere, we do nott check for a connection or an authentication before we submit, everything is done within the request, every request. This goes a long way towards preserving the abstraction we mentioned above.
+                    
+                    li 
+                    h4 Cacheing
+                    p Browsers already have the ability to cache data built in, sometimes to the frustration of the developer. Think how ofter you have to do a forced refresh to view a small CSS change etc. However, it's an important and useful feature. With libraries like the <a href="https://www.npmjs.com/package/node-cache">NodeCache</a> available, we can simply apply this technology to a Node website which will lead to a faster and more efficient browser experienece for a user interacting with our data.  
+                    
+                    li 
+                    h4 Uniform Interface
+                    p This is regardingt the interface used to communicate. In our case the GET, PUT, POST and DELETE responses we send and the result we use to return the data. It's a standardised system we can use.
+                    
+                    li 
+                    h4 Layered System
+                    p The individual components of the system do not need to understand each other, we can work on one module without worrying about the other. Once again, abstraction is the goal. I see strong parallels here to OOP. In our case, we have the requests from the browser, the routing is separate in Express and if we code effectively, we use separate modules of code to connect our routes to the database.
+                    
+                    li 
+                    h4 Code On Demand
+                    p This is the facility for the client to download code to increase the functtionality. The best example I can think of right now is perhaps the ability to download an app. Particularily on a mobile device, this would improve the user experience as it would be more customised to the device than a responsive site. I'm not sure how good an example this is though.
+
                 h4 Basic Requests &amp; Responses
-                p We will start by just getting a very basic response from the server when we submit data from a form.
+                p Now we can begin with some practical. To start with, I have a simple form below which sends data to <b>GET</b>, <b>POST</b>, <b>PUT</b> and <b>DELETE</b>. The form uses the <b><i>Fetch()</i></b> api within JavaScript on the client side to send requests to the server at a specific route.
+
+                p For now, within the routing, we just send the data right back and it appears in the window below with some text added to confirm it came back from the correct path:
                 br
                 .restBox
                     .form
@@ -47,6 +76,27 @@ html(lang="en")
                     .responseWindow 
                         h4 Response from server:
                         #responseContent
-                p To prevent a reload, the buttons are monitored by <b><i>JavaScript</i></b> listeners. When pressed, the <b><i>Fetch()</i></b> api is used to sent a pre-prepared <b><i>JSON</i></b> header to the server. The method (GET, PUT, POST or DELETE) is embedded within the JSON which when recieved by <b>EXPRESS</b> is routed accordingly.  
+                h4 Client side code: 
+                    include includes/restclientcode1.pug 
+                p We don't reload, the buttons are monitored by listeners. When pressed, the <b><i>Fetch()</i></b> api is used by calling the appropriate function (<b><i>doGet()</b></i>, <b><i>doPost</b></i>, <b><i>doPut()</b></i> &amp; <b><i>doDelete()</b></i>).
+                
+                p These functions call <b><i>buildRequest()</b></i> which returns a <b><i>JSON</i></b> header which we can send to the server with the appropriate method (GET, PUT, POST or DELETE) embedded within a JSON. When recieved by <b>EXPRESS</b> it's routed accordingly as we will see shortly. Note, the data we are sending is embedded ino the body on everywhere but the GET method where it is sent in a query instead. More about that later.
+                br
+                h4 Server side code:
+                p My node app has rather too much going on to list the whole thing here because it is serving a number of 'mini' websites. Therefore, I am just going the show the code needed here. First we have the app.js file, the main node app itself: 
+                    include includes/restappcode1.pug 
+ 
+                p As you can see, we use the express module. This was imported using npm earlier. The other requirement is a routing file where I have separated out my routes into separate functions. This makes things modular, a lot more easy to manage. It helps us comply with the requirements of a REST api. Essentially, it's where i keep my own middleware functions.
+
+                p The following lines set up our rendering engine. In this case I am using PUG (formerly known as JADE):
+                    pre.
+                            <code>
+                            app.set('view engine', 'pug');
+                            app.locals.pretty = true; //format rendered html neatly
+                            app.use(routes.pugRoutes);
+                            </code>
+                p The <code>routes.restRoutes(app, express);</code> calls my middleware function to sort the REST routes, we will see a bit later. You can see I have a route at the bottom which will default if nothing else is caught. This redirects to my custom 404 page. The last couple of lines of code set up Node to listen to a port, that completes the server. Next, we have my routing function within my routes.js file:
+                    include includes/restroutescode1.pug
+
                 p For the <b>GET</b> request, the input box text is sent via a query in the url. This is because GET does not have a body within which to sent anything to the server. For <b>PUT</b>, <b>POST</b> and <b>DELETE</b> responses, the body can be used to send the data in a name - value pair.
             include includes/footer.pug

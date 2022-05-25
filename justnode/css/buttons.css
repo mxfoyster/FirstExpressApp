@@ -1,0 +1,105 @@
+/*
+Basic button hover effect by Mark Foyster - May 2022
+
+****** USAGE INSTRUCTIONS ******
+Place your buttons in a div container with class buttons like this:
+    <div class="buttons"> </div>
+
+Use anchor tags for each button with class as button1 like this within div:
+    <a class="button1" href="Your Destination here">Button Title Here</a>
+
+Add class="selected" to the selected button you want a separate font colour
+
+Most of the button properties (colours, grow size etc) can be set in the 
+custom properties below here form within the :root{} selector
+*/
+
+:root {
+    /* Button 1 custom properties */
+    --button1-color: rgb(89, 89, 240);
+    --button1-hover-color: rgb(135, 135, 159);
+    --button1-min-padding: 5px;
+    --button1-grow-by: 4px; /*remember, growth will actually be twice this*/
+    --button1-shadow-color: rgb(198, 194, 194);
+    --button1-font-color: whitesmoke;
+    --button1-font-hover-color: rgb(237, 245, 120);
+    --button1-font-selected-color: red;
+  }
+
+@keyframes button1Hover 
+{
+    from { 
+        background-color: var(--button1-color);
+        border-color: var(--button1-color);
+        color: var(--button1-font-color);
+        padding: var(--button1-min-padding);
+        margin: var(--button1-min-padding);
+    }
+    to { 
+        background-color: var(--button1-hover-color);
+        border-color: var(--button1-hover-color);
+        color: var(--button1-font-hover-color);
+        padding: calc(var(--button1-min-padding) + var(--button1-grow-by));
+        margin: calc(var(--button1-min-padding) - var(--button1-grow-by));
+    }
+}
+@keyframes button1Start /*reverse for off hover, will also run at start*/
+{
+    from { 
+        background-color: var(--button1-hover-color);
+        border-color: var(--button1-hover-color);
+        color: var(--button1-font-hover-color);
+        padding: calc(var(--button1-min-padding) + var(--button1-grow-by));
+        margin: calc(var(--button1-min-padding) - var(--button1-grow-by));
+    }
+    to { 
+        background-color: var(--button1-color);
+        border-color: var(--button1-color);
+        color: var(--button1-font-color);
+        padding: var(--button1-min-padding);
+        margin: var(--button1-min-padding);
+    }
+}
+@keyframes buttonSelected {
+    from{
+        color: var(--button1-font-color);
+    }
+    to{
+        color: var(--button1-font-selected-color);
+    }
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.button1{
+    animation: button1Start 0.8s ease-in-out;
+    position: relative;
+    text-decoration: none;
+    background-color: var(--button1-color);
+    border-color: var(--button1-color);
+    color: var(--button1-font-color);
+    padding: var(--button1-min-padding);
+    margin: var(--button1-min-padding);
+    border-style: outset;
+    border-width: 4px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 4px 2px var(--button1-shadow-color); /*x offset y offset blur spread colour */
+}
+
+.button1:hover{
+    animation: button1Hover 0.8s ease-in-out;
+    background-color: var(--button1-hover-color);
+    border-color: var(--button1-hover-color);
+    color: var(--button1-font-hover-color);
+    padding: calc(var(--button1-min-padding) + var(--button1-grow-by));
+    margin: calc(var(--button1-min-padding) - var(--button1-grow-by));
+}
+
+.selected{
+	animation: buttonSelected 0.4s ease-in-out;
+    color:var(--button1-font-selected-color);
+}
