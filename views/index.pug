@@ -6,14 +6,14 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel='stylesheet', type='text/css', href='css/buttons.css')
         link(rel='stylesheet', type='text/css', href='css/profile-style.css')
+        script(src="js/profile.js" defer) 
         title Mark Foyster
     body 
+        include includes/contactpopup.pug
         #top
         .main-container
             include includes/profileheader.pug
             .middle 
-               
-                
                 .intro
                     h3.headings(class="subHeading") INTRO 
                     .bkgKeyboard

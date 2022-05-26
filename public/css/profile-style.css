@@ -1,6 +1,6 @@
 :root{
 	--topAnchorOffset: -200px;
-	--boxedElementsColor: rgb(216, 217, 241); /*rgba(247, 255, 247, 0.8; */
+	--boxedElementsColor: #d8d9f1; /*rgba(247, 255, 247, 0.8; */
 }
 @font-face {
 	font-family: roboto-normal;
@@ -72,7 +72,7 @@ nav > a{
 	top: 10px;
 	background-color: var(--boxedElementsColor);
 	border-radius: 30px;
-	box-shadow: 0 0 10px 10px rgba(247, 255, 247, 0.8) inset;
+	box-shadow: 0 0 10px 10px #f7fff7cc inset;
 	z-index: 2;
 }
 
@@ -80,16 +80,24 @@ nav > a{
 	text-align: center;
 }
 
-.rightHeader{
+.midHeader{
 	margin: auto;
 	text-align: center;
 }
 
-.rightHeader > h3{
+.midHeader > h3{
 	text-align: center;
 	line-height: 0.6em;
 	font-size: 2rem;
 
+}
+
+.rightHeader{
+	margin: auto;
+}
+
+.contactBig{
+	display: none;
 }
 
 .middle{
@@ -286,10 +294,9 @@ nav > a{
 	}
 }
 
-
 @media (max-width: 1000px){
 	
-	.rightHeader > h1{
+	.midHeader > h1{
 		font-size: 1.6rem;
 		line-height: 1.4rem;
 	}

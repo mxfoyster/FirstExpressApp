@@ -1,11 +1,12 @@
 //express modules
 const express = require('express');
+var cors = require('cors') // we need this for embedded messenger
 
 //my modules
 const routes = require('./routes'); 
 
 const app = express();
-
+app.use(cors());
 const port = process.env.PORT ||3000;
 
 //pug pages

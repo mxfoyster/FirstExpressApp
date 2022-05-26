@@ -16,7 +16,7 @@ custom properties below here form within the :root{} selector
 
 :root {
     /* Button 1 custom properties */
-    --button1-color: rgb(89, 89, 240);
+    --button1-color: #5959f0;
     --button1-hover-color: rgb(135, 135, 159);
     --button1-min-padding: 5px;
     --button1-grow-by: 4px; /*remember, growth will actually be twice this*/

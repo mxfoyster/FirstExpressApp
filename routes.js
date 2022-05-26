@@ -6,7 +6,7 @@ const fs = require('fs')
 
 //here we handle our pug routing
 function pugRoutes(req, res, next){
-    //get the path, then the ectension
+    //get the path, then the extension
     let thisPath = req.path;
     let extName = nodePath.extname(thisPath);
     let thisFile = nodePath.basename(thisPath);
