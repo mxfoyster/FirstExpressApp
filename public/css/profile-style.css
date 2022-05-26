@@ -23,6 +23,7 @@ p{
 	font-family: roboto-paragraph;
 	font-size: 1.2rem;
 	line-height: 1.6rem;
+	padding-left: 8px;
 }
 
 ul {
@@ -96,8 +97,11 @@ nav > a{
 	margin: auto;
 }
 
-.contactBig{
-	display: none;
+.contactSml{
+	padding: 15px;
+}
+.contactSml:hover{
+	opacity: 0.8;
 }
 
 .middle{
@@ -157,18 +161,17 @@ nav > a{
 
 
 .skillsUl{
-	display: inline-block;
+	display: block;
 	position: relative;
 	font-size: 1.2rem;
 	color: blue;
 	background-color:var(--boxedElementsColor);
 	border-radius: 10px;
 	border-style: ridge;
-	left: 40vw;
-	transform: translatex(-50%);
 	padding: 1rem;
 	padding-left: 2rem;
 	z-index: 0;
+	margin: 3px;
 }
 
 .bkgMouse{
@@ -244,9 +247,9 @@ nav > a{
 }
 
 .mainHeading{
-	font-size: 3.5rem;
+	font-size: 2.5rem;
 	text-align: center;
-	line-height: 0.6em;
+	line-height: 1.1rem;
 }
 
 .subHeading{
@@ -264,6 +267,15 @@ nav > a{
 	.main-container{
 		width:90%;
 		margin:auto;
+	}
+	.mainHeading{
+		font-size: 3.5rem;
+		line-height: 0.6em;
+	}
+	.skillsUl{
+		display: inline-block;
+		left: 40vw;
+		transform: translatex(-50%);		
 	}
 }
 
@@ -291,27 +303,5 @@ nav > a{
 	.skillsUlNrImage{
 		left: calc(40vw - 300px);
 		transform: translatex(-50%);
-	}
-}
-
-@media (max-width: 1000px){
-	
-	.midHeader > h1{
-		font-size: 1.6rem;
-		line-height: 1.4rem;
-	}
-	h3.red{
-		font-size: 1.2rem;
-	}
-
-}
-
-@media (max-width: 825px){
-	body{
-		width: 94%;
-	}
-
-	.leftHeader{
-		margin:auto;
 	}
 }

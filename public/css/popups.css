@@ -27,7 +27,6 @@
 }
 
 .contactPopUp{
-	/* visibility: hidden; */
 	position: fixed;
 	width: 280px;
 	height: 200px;
@@ -38,7 +37,7 @@
 	border: 3px solid mediumblue;
 	padding: 5px;
 	transform: translate(-50%, -50%);
-
+    box-shadow: 7px 7px 3px 3px rgb(141, 139, 139); 
 	z-index: 3;
 }
 .popupFadeIn{
