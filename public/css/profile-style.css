@@ -12,6 +12,14 @@
 	src: url('../fonts/Roboto-Regular.ttf');
   }
 
+@keyframes newMarker {
+	from{
+		background-color: red;
+	}
+	to{
+		background-color: green;
+	}
+}
 
 body 
 {
@@ -136,6 +144,21 @@ nav > a{
 	flex-wrap: wrap;
 	gap: 20px;
 	justify-content: space-evenly;
+}
+
+#new{
+	animation-name: newMarker;
+  	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+	/* background-color:red; */
+	padding-left: 7px;
+	padding-right: 7px;
+	color:white;
+	border-radius: 10px;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
 }
 
 /*-------------- Intro section styles -------------------*/
