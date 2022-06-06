@@ -12,6 +12,7 @@
 	src: url('../fonts/Roboto-Regular.ttf');
   }
 
+/* -------------ANIMATIONS------------------ */
 @keyframes newMarker {
 	from{
 		background-color: red;
@@ -19,6 +20,32 @@
 	to{
 		background-color: green;
 	}
+}
+
+@keyframes moveHeadings {
+	from{
+		margin-left: 80%;
+		opacity: 0%;
+	}
+	to{
+		margin-left: 35px;
+		opacity: 100%;
+	}
+}
+
+@keyframes fadeIn {
+	from{
+		opacity: 0%;
+	}
+	to{
+		opacity: 100%;
+	}
+}
+
+html{
+	animation-name: fadeIn;
+	animation-timing-function: ease-out;
+	animation-duration: 1.2s;
 }
 
 body 
@@ -49,6 +76,7 @@ ul li::before {
 	margin-left: -1em; /* needed for space */
   }
 
+/* --------------------- MENU STYLES ----------------------- */
 nav{
 	display: flex;
 	flex-wrap: wrap;
@@ -68,6 +96,7 @@ nav > a{
 	color:white;
 }
 
+/* --------------------- HEADER STYLES ------------------------ */
 .header{
 	display: flex;
 	padding-bottom: 1rem;
@@ -112,6 +141,7 @@ nav > a{
 	opacity: 0.8;
 }
 
+/* ------------- MIDDLE BLOCK STYLES ------------------ */
 .middle{
 	display: block;
 }
@@ -120,12 +150,27 @@ nav > a{
 	margin-top: 2rem;
 }
 
+/* ---------------FOOTER STYLES ------------------------ */
 .footer{
 	text-align: center;
 	display: block;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	color:blue;
 }
+
+.footerLink{
+	display: inline-block;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.footerLinkContainer{
+	display: grid;
+    min-height: 51px;
+    grid-template-columns: 55px auto;
+}
+
+/* --------------- NORMAL STYLING ----------------------- */
 
 .sub{
 	font-size: 0.8rem;
@@ -277,6 +322,9 @@ nav > a{
 
 .subHeading{
 	font-size: 2.5rem;
+	animation-name: moveHeadings;
+  	animation-timing-function: ease-out;
+	animation-duration: 2s;
 }
 
 /*------------------ Media Queries --------------------*/
