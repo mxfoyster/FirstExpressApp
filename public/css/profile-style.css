@@ -23,13 +23,19 @@
 }
 
 @keyframes moveHeadings {
-	from{
+	0%{
 		margin-left: 80%;
 		opacity: 0%;
 	}
-	to{
+	75%{
 		margin-left: 35px;
 		opacity: 100%;
+	}
+	88%{
+		transform: skewX(30deg);
+	}
+	100%{
+		transform: skewX(0deg);
 	}
 }
 
