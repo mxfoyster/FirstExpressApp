@@ -1,3 +1,14 @@
+:root{
+    /* COLOURS */
+    --popUpBackgroundColour: whitesmoke; 
+    --popUpBoxShadowColour: rgb(141, 139, 139); /* Best to set this a darker tone of the background colour */
+    --popUpTitleColour:red;
+    --popUpBorderColour: mediumblue;
+    
+    /* SIZES */
+    --popUpSize: 90%; /*This is the size of the entire popup relative to screen*/
+}
+
 @keyframes popupFadeIn 
 {
     from { 
@@ -22,10 +33,19 @@
     }
 }
 
-#closeBtn{
+#contactCloseBtn{
     float: right;
 }
 
+#bigCloseBtn{
+    position:absolute;
+	right: 10px;
+	top: 10px;
+    /* padding: 1vw;*/
+	z-index: 4; 
+}
+
+/* STYLES FOR MAIN BODY OF ECAH POP UP */
 .contactPopUp{
 	position: fixed;
 	width: 280px;
@@ -40,6 +60,23 @@
     box-shadow: 7px 7px 3px 3px rgb(141, 139, 139); 
 	z-index: 3;
 }
+
+.bigPopUp{
+	position: fixed;
+	width: var(--popUpSize);
+	height: var(--popUpSize);
+	left: calc( (100% - var(--popUpSize))/2);
+	top: calc( (100% - var(--popUpSize))/2);
+	background-color: var(--popUpBackgroundColour);
+	border-radius: 25px;
+	border: 3px solid var(--popUpBorderColour);
+	padding: 5px;
+    box-shadow: 7px 7px 3px 3px var(--popUpBoxShadowColour); 
+	z-index: 3;
+    overflow: hidden;
+}
+
+/* SHARED CSS */
 .popupFadeIn{
     animation: popupFadeIn 0.5s ease-in-out;
     visibility: visible;
@@ -50,11 +87,12 @@
     visibility: hidden;
 }
 
-.popupTitle{
-    color:red;
+.popupTitle, #popUpTitle{
+    color: var(--popUpTitleColour);
     text-align: center;
 }
 
+/* CSS FOR CONTACT POP UP ONLY */
 .contactLine{
     display: grid;
     min-height: 51px;
@@ -70,4 +108,22 @@
     display: inline-block;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+/* CSS FOR BIG POP UP ONLY */
+.stopScrolling{
+	overflow: hidden;
+}
+
+.popUpTitleContainer {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   width: var(--popUpSize);
+   text-align: center;
+}
+
+#popUpTitle{
+    font-size: 1.5rem;
+    font-weight: bold;
 }
