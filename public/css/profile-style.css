@@ -72,7 +72,7 @@ ul {
   }
 
 /* This UL custom bullets courtesy of W3Schools */
-ul li::before {
+ul li::before{
 	content: "\2022";  /* \2022 = CSS Code/unicode for bullet */
 	font-size: 1.2rem;
 	color: red; 
@@ -81,6 +81,16 @@ ul li::before {
 	width: 1em; /* needed for space */
 	margin-left: -1em; /* needed for space */
   }
+
+/* The w3schools one is good but I made thsis to be allow more flexibility */
+.myLI{
+	font-size: 1.2rem;
+	color: red; 
+	font-weight: bold; 
+	display: inline-block; /* adds space between the bullet and text */
+	width: 1em; /* needed for space */
+	margin-left: 1em; /* needed for space */
+}
 
 /* --------------------- MENU STYLES ----------------------- */
 nav{
@@ -197,7 +207,7 @@ nav > a{
 	justify-content: space-evenly;
 }
 
-#new{
+.new, #new{
 	animation-name: newMarker;
   	animation-duration: 2s;
 	animation-iteration-count: infinite;
@@ -206,7 +216,7 @@ nav > a{
 	padding-left: 7px;
 	padding-right: 7px;
 	color:white;
-	border-radius: 10px;
+	border-radius: 6px;
 	border-style: solid;
 	border-color: black;
 	border-width: 1px;
@@ -310,6 +320,7 @@ nav > a{
 	padding-left: 1rem;
 	padding-right: 1rem;
 	z-index: 0;
+	max-width: 380px;
 }
 
 /*--------------- Styles for headings ---------------------*/
@@ -353,6 +364,9 @@ nav > a{
 		display: inline-block;
 		left: 40vw;
 		transform: translatex(-50%);		
+	}
+	.boxedLink{
+		max-width: 700px;
 	}
 }
 

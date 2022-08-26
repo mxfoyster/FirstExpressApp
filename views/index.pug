@@ -49,7 +49,7 @@ html(lang="en")
                     
                 p In the past, I have had a play with CMS including Joomla and Wordpress. I made my own basic CMS using JavaScript, PHP and XML/XSLT for a project about a decade ago.
                 
-                p Bored? Why not play my <button onclick="activateBigPopUp('', 'wordgame')">WORDGAME</button>.
+                p Bored? Why not play my <button class="new" onclick="activateBigPopUp('', 'wordgame')">WORDGAME</button>.
                 
                 #education
                 .education 
@@ -99,7 +99,7 @@ html(lang="en")
                                     a(href="https://www.linkedin.com/in/mark-foyster/" target="_blank") LinkedIn 
                                 li 
                                     a(href="https://pastimperfect.co.uk" target="_blank") Past Imperfect Website&nbsp;
-                                    button(onclick="activateBigPopUp('Past Imperfect', 'pastimperfect')") MORE INFO
+                                    button.new(onclick="activateBigPopUp('Past Imperfect', 'pastimperfect')") MORE INFO
                         
                         .boxedLink
                             h4.green OLDER PORTFOLIOS
@@ -138,18 +138,39 @@ html(lang="en")
                         
                         .boxedLink
                             h4.green WEB PROJECTS
-                            ul 
-                                li 
-                                    a(href="https://componentlibrary.markfoyster.co.uk/" target="_blank") Library of web components&nbsp;
-                                    button(onclick="activateBigPopUp('Component Library', 'componentlibrary')") MORE INFO  
-                                li 
-                                    a(href="https://bootstrap.markfoyster.co.uk/" target="_blank") Bootstrap, PHP &amp; MySQL Demo&nbsp;
-                                    button(onclick="activateBigPopUp('Bootstrap Demo', 'bootstrap')") MORE INFO 
-                                li 
-                                    a(href="http://mark-foyster.epizy.com/watersports/index.php" target="_blank") Using Real Data&nbsp;
-                                    button(onclick="activateBigPopUp('Real Data Demo', 'usingrealdata')") MORE INFO 
-                                li 
-                                    a(href="http://mark-foyster.epizy.com/kayak/" target="_blank") Soggy Bottom Kayak Club (AUTH System) 
+                            table
+                                tr 
+                                    td
+                                        span.myLI &bull; 
+                                        a(href="https://componentlibrary.markfoyster.co.uk/" target="_blank") Library of web components
+                                    td
+                                         button.new(onclick="activateBigPopUp('Component Library', 'componentlibrary')") MORE INFO  
+
+                                tr 
+                                    td 
+                                        span.myLI &bull;
+                                        a(href="https://bootstrap.markfoyster.co.uk/" target="_blank") Bootstrap, PHP &amp; MySQL Demo
+                                    td
+                                        button.new(onclick="activateBigPopUp('Bootstrap Demo', 'bootstrap')") MORE INFO 
+                                tr
+                                    td 
+                                        span.myLI &bull; 
+                                        a(href="http://mark-foyster.epizy.com/watersports/index.php" target="_blank") Using Real Data
+                                    td 
+                                        button.new(onclick="activateBigPopUp('Real Data Demo', 'usingrealdata')") MORE INFO
+                                tr 
+                                    td 
+                                        span.myLI &bull;
+                                        a(href="http://mark-foyster.epizy.com/kayak/" target="_blank") Soggy Bottom Kayak Club (AUTH System) 
+                                    td
+
+                                
+                                    
+                                       
+                                    
+                                  
+                                         
+                                    
 
                     p 
                         | Everything here is for the purpose of practice and as proof I have a grasp of the basic concept of each technology. The code is available on my github account 
