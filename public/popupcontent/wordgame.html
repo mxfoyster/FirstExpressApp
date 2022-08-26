@@ -1,0 +1,43 @@
+<span class="ourAlertBox" id="ourAlertBoxCNT">
+    <span class="ourAlertMessage" id="alertText">Test Text in our alert box</span>
+    <input class = "ourAlertOK" type="button" name="getAlertOK" value="OK"/>
+</span>
+
+<div class="gridContainer">
+    <div class="leftBox">
+        <div class="wgHeader">Guess the film if you can</div>
+        <div class="imgBox">
+            <img class="pFrame" src="../wordgame/images/p0.png" id="pBits" width="400" height="700" />
+        </div>
+    </div>
+
+    <div class="rightBox">
+        <div class="rightInner">
+            <form name="choices" method="get" action="">	
+            <table class ="charGuessBox">
+                <tr>
+                    <td><label>Choose a letter: </label></td><td class="hardLabel">Mode:</td>
+                </tr>
+                <tr>
+                    <td><input type="text"  id="myTry" class="letterField" maxlength="1" /></td><td id="modeIndicator">HARD</td>
+                </tr>
+                <tr>
+                    <td><input type="button" name="tryChar" value="TRY MY LUCK"/></td>
+                </tr>
+            </table>
+            
+            
+            <table class ="hintBox">
+                <tr>
+                    <td><input type="button" name="getHint" value="HINT"/></td>
+                    <td><input type="button" value="SETTINGS" onclick="displayInstructions()"/></td>
+                    <td><input type="button" value="GUESS" onclick="guessMovie()"/></td>
+                </tr>
+            </table>
+            <h3 class="footer"><span class="filmNamePlacer" id="output2">FILM NAME WILL DISPLAY HERE</span></h3>
+            <h4 id="guessedLetters"><b>WRONG GUESSES:</b> </h4>
+            </form>
+        </div>
+    </div>
+
+</div><!-- End of grid container-->

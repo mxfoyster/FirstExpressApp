@@ -1,0 +1,196 @@
+/*We have to have a body font size otherwise the monospaced won't work*/
+body {
+	font-size:medium;
+}
+
+label, .hardLabel{
+	color: firebrick;
+	font-weight: bold;
+}
+
+.gridContainer{
+	display: grid;
+	grid-column-gap: 0px;
+	/* grid-auto-columns: 400px; */
+	grid:
+	'leftBox'
+	'rightBox';
+	max-width: 820px;
+	margin: auto;
+}
+
+.leftBox{
+	max-width: 380px;
+	grid-area: leftBox;
+	height: 530px;
+}
+.rightBox{
+	max-width: 380px;
+	grid-area: rightBox;
+}
+
+.imgBox{
+	background-image: url(../wordgame/images/pbackgnd.png);
+	background-repeat: no-repeat;
+	width: 280px;
+	height:auto;
+	margin: auto;
+}
+
+.pFrame{
+	width: 280px;
+	height: auto;
+	max-height: 710px;
+}
+
+.hintBox{
+	margin-top: 5px;
+}
+
+/* Our CSS for the custom alert box. Will be extracted to a separate sheey=t later me thinks :-D */
+.ourAlertBox{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: linen;
+	border-radius: 25px;
+	border: 3px solid mediumblue;
+	padding: 20px;
+	width: 250px;
+	height: 150px;	
+	visibility: hidden;
+	z-index: 1;
+	overflow-y: scroll;
+}
+
+.ourAlertMessage{
+	display: block;
+}
+
+.ourAlertMessage h2{
+	color: firebrick;
+	font-weight: bold;
+	text-align: center;
+	font-size: 1rem;
+}
+
+.ourAlertMessage p {
+	font-size: 0.75rem;
+	line-height: 1.3rem;
+}
+
+.ourAlertOK{
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translatex(-50%);/* Fast becoming by favourite bit of css allowing for dimensions of element */
+}
+/* End of custome alert box css */
+
+.wgHeader{
+	font-size: large;
+	color: darkslateblue;
+	font-weight: bold;
+	text-align: center;
+}
+
+.pFrame /*Picture frame*/{
+	border-style: solid;
+}
+
+/*Radio buttons box*/
+.difficultyBox {
+	border-style: outset;
+	background-color: lightgray;
+	text-align: center;
+	width: 100%;
+	max-width: 400px;
+}
+
+/*Letter selection field*/
+.letterField {
+	width: 20px;
+}
+
+/*Letter selection box*/
+.charGuessBox {
+	border-style: outset;
+	background-color: lightgray;
+	text-align: center;
+	width: 100%;
+}
+
+.hintBox {
+	border-style: outset;
+	background-color: lightgray;
+	text-align: center;
+	width: 100%;
+}
+
+.fullGuessBox {
+	border-style: outset;
+	background-color: lightgray;
+	text-align: center;
+	width: 100%;
+}
+
+.footer{
+	text-align: center;
+}
+
+/*Our guess string*/
+.filmNamePlacer {
+	font-family: Monospace;
+	font-weight: bold;
+	font-size: xx-large;
+	text-align: center;
+}
+
+.inInstructions{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#modeIndicator{
+	font-weight: bold;
+	color: red;
+}
+
+@media (min-width: 820px)
+{
+	.gridContainer{
+		grid-column-gap: 20px;
+		grid: 
+		'leftBox rightBox';
+	}
+	.rightInner{
+		display: block;
+		transform: translateY(50%);
+	}
+
+	.ourAlertMessage p {
+		font-size: 1rem;
+	}
+
+	.ourAlertMessage h2{
+	font-size: 1.5rem;
+	}
+
+	.wgHeader{
+		font-size: xx-large;
+	}
+
+	.leftBox{
+		height: 710px;
+	}
+	
+	.imgBox{
+		width: 400px;
+	}
+	.pFrame{
+		width: 400px;
+		height: auto;
+	}
+}
+

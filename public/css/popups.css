@@ -6,7 +6,7 @@
     --popUpBorderColour: mediumblue;
     
     /* SIZES */
-    --popUpSize: 90%; /*This is the size of the entire popup relative to screen*/
+    --popUpSize: 92%; /*This is the size of the entire popup relative to screen*/
 }
 
 @keyframes popupFadeIn 
@@ -65,8 +65,12 @@
 	position: fixed;
 	width: var(--popUpSize);
 	height: var(--popUpSize);
-	left: calc( (100% - var(--popUpSize))/2);
-	top: calc( (100% - var(--popUpSize))/2);
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* left: calc( (1vw - var(--popUpSize))/2); */
+	/* top: calc( (1vh - var(--popUpSize))/2);  */
+
 	background-color: var(--popUpBackgroundColour);
 	border-radius: 25px;
 	border: 3px solid var(--popUpBorderColour);
@@ -74,6 +78,7 @@
     box-shadow: 7px 7px 3px 3px var(--popUpBoxShadowColour); 
 	z-index: 3;
     overflow: hidden;
+    
 }
 
 /* SHARED CSS */

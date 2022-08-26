@@ -1,0 +1,23 @@
+<div>
+    <h2>Word Game Instructions and Settings</h2>
+    <p>Welcome to my Word Game. This is Hangman with a difference. Guess the name of the movie before a penguin is built to win.</p>
+    <p>Simply try different letters and see if you get a match. In easy mode, you have 9 attempts. In Hard mode you only have 7. Set the difficulty below:</p>
+    <table class="difficultyBox inInstructions"><!-- difficulty box Table-->
+        <tr>
+        <td colspan="2"><label>Difficulty</label></td>
+        </tr>
+        <td><label style="color: black;">EASY</label></td>
+        <td><input type="radio" name="difficulty" id="easy" value ="easy" onchange="changeDifficulty()"/><br/></td>
+        </tr>
+        <tr>
+        <td><label style="color: black;" >HARD</label></td>
+        <td><input type="radio" name="difficulty" id="hard" value = "hard" onchange="changeDifficulty()"/></td>
+        </tr>
+    </table>
+
+    <p>Wrong guesses are displayed below the buttons, the game will let you choose the wrong letter more than once so be careful.</p>
+    <p>Stuck? Try the <i>in game</i> <button>HINT</button> button. It gives you a catchphrase or details about the movie but <b>BEWARE</b>, it will cost you <b>TWO GOES</b>. Less that two goes left? sorry, hint will not be available!</p>
+    <p>Think you know the movie name? Use the <button>GUESS</button> button and see if you're correct. But if you're wrong, you'll automatically <b>LOSE</b> so choose carefully!</p>
+    <p>If you want to read these instructions again, just press the <button>SETTINGS</button> button in the game.</p>
+</div>
+    

@@ -84,7 +84,15 @@ function activateBigPopUp(title, contents = "default"){
         bigPopUp.classList.remove("popupFadeIn");
         bigPopUp.classList.add("popupFadeOut");
         document.body.classList.remove("stopScrolling"); //re-enable scrolling main window
-        
+        //check if an alert is also active, close it if it is
+        let alertBox = document.getElementById("ourAlertBoxCNT");
+        console.log(alertBox,"closing");
+        if(alertBox){
+            if (alertBox.style.visibility == "visible") {
+                alertBox.style.visibility == "hidden";
+                console.log("closing both");
+            }
+        }
         bigPopUpStatus = false;
     }
 }

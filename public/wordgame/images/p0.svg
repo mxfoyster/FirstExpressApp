@@ -1,0 +1,5 @@
+<svg width="350" height="700">
+        <!-- BODY -->
+        <ellipse cx="175" cy="360" rx="140" ry="250" stroke="black" stroke-width="4" fill="black" />
+        <ellipse cx="175" cy="390" rx="80" ry="150" stroke="white" stroke-width="4" fill="white" />
+</svg>

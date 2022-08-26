@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="700">
+        <!-- BODY -->
+        <ellipse cx="175" cy="360" rx="140" ry="250" stroke="black" stroke-width="4" fill="black" />
+        <ellipse cx="175" cy="390" rx="80" ry="150" stroke="white" stroke-width="4" fill="white" />
+        <!-- head -->
+        <circle  cx="175" cy="60"  r="55" stroke="black" stroke-width="4" fill="black"/>
+        <!-- eyes -->
+        <circle  cx="158" cy="50"  r="8" stroke="white" stroke-width="4" fill="white"/>
+        <circle  cx="192" cy="50"  r="8" stroke="white" stroke-width="4" fill="white"/>
+        <!-- pupils -->
+        <circle  cx="158" cy="50"  r="3" stroke="black" stroke-width="4" fill="black">
+            <!-- <animate attributeName="cx" values="155;162;155" dur="1s" repeatCount="indefinite" /> -->
+            <!-- <animate attributeName="cy" values="50;53;50;47;50" dur="1s" repeatCount="indefinite" /> -->
+        </circle>
+            
+        <circle  cx="192" cy="50"  r="3" stroke="black" stroke-width="4" fill="black">
+            <!-- <animate attributeName="cx" values="195;189;195" dur="1s" repeatCount="indefinite" /> -->
+            <!-- <animate attributeName="cy" values="50;53;50;47;50" dur="1s" repeatCount="indefinite" /> -->
+        </circle>
+        <!-- beak -->
+        <ellipse cx="175" cy="80" rx="12" ry="7" stroke="black" stroke-width="1" fill="orange">
+            <!-- <animate attributeName="ry" values="7;10;7" dur="1s" repeatCount="indefinite" /> -->
+        </ellipse>
+        <line x1="163" y1="80" x2="187" y2="80" stroke="black" stroke-width="1">
+            <!-- <animate attributeName="stroke-width" values="1;4;1" dur="1s" repeatCount="indefinite" /> -->
+        </line>
+        
+</svg>

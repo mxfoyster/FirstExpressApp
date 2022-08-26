@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<movienames>
+<movie>
+	<name>THE SHINING</name>
+	<hint>'Here's Johnny!'</hint>
+</movie>
+<movie>
+	<name>THE TERMINATOR</name>
+	<hint>'Sarah Connor kills Cyborg'</hint>
+</movie>
+<movie>
+	<name>GHOSTBUSTERS</name>
+	<hint>'Who you gonna call?'</hint>
+</movie>
+<movie>
+	<name>HONEY I SHRUNK THE KIDS</name>
+	<hint>'Scientist makes things smaller'</hint>
+</movie>
+<movie>
+	<name>HONEY I BLEW UP THE BABY</name>
+	<hint>'Scientist makes things bigger'</hint>
+</movie>
+<movie>
+	<name>THE NEVERENDING STORY</name>
+	<hint>'Child's movie with cameo by David Bowie'</hint>
+</movie>
+<movie>
+	<name>THE FAST AND THE FURIOUS</name>
+	<hint>'I live my life a quarter mile at a time'</hint>
+</movie>
+<movie>
+	<name>FIFTY SHADES OF GREY</name>
+	<hint>'Safe word yellow'</hint>
+</movie>
+<movie>
+	<name>STAR TREK</name>
+	<hint>'Live long and prosper'</hint>
+</movie>
+<movie>
+	<name>STAR WARS</name>
+	<hint>'Yoda'</hint>
+</movie>
+<movie>
+	<name>JURASSIC PARK</name>
+	<hint>'Big green lizards. Were old, now new!'</hint>
+</movie>
+<movie>
+	<name>SCREAM</name>
+	<hint>'Sidney Prescott survives'</hint>
+</movie>
+<movie>
+	<name>SCARY MOVIE</name>
+	<hint>'spoof of movie that sold lots of masks'</hint>
+</movie>
+<movie>
+	<name>THE SHAWSHANK REDEMPTION</name>
+	<hint>'Andy Dufresne escapes'</hint>
+</movie>
+<movie>
+	<name>THE GREEN MILE</name>
+	<hint>'Dead man walking'</hint>
+</movie>
+<movie>
+	<name>THE DARK KINGHT</name>
+	<hint>'Criminals aren't complicated, Alfred. Just have to figure out what he's after.'</hint>
+</movie>
+<movie>
+	<name>THE GODFATHER</name>
+	<hint>'Don Corleone'</hint>
+</movie>
+<movie>
+	<name>ONCE UPON A TIME IN HOLLYWOOD</name>
+	<hint>'Sharon Tate survives this time..'</hint>
+</movie>
+<movie>
+	<name>PULP FICTION</name>
+	<hint>'The path of the righteous man is beset on all sides by the inequities of the selfish and the tyranny of evil men'</hint>
+</movie>
+<movie>
+	<name>RESERVOIR DOGS</name>
+	<hint>'Mr Blue, Mr Green etc, ears are lost!'</hint>
+</movie>
+<movie>
+	<name>FIGHT CLUB</name>
+	<hint>'I Want You To Hit Me As Hard As You Can'</hint>
+</movie>
+<movie>
+	<name>PLATOON</name>
+	<hint>'Somebody once wrote, "Hell is the impossibility of reason". That's what this place feels like. Hell'</hint>
+</movie>
+<movie>
+	<name>THE CROW</name>
+	<hint>'It can't rain all the time'</hint>
+</movie>
+<movie>
+	<name>BLADE</name>
+	<hint>'I have spent my whole life lookin' for that thing that killed my mother, and made me what I am'</hint>
+</movie>
+<movie>
+	<name>RAMBO</name>
+	<hint>'One man, small town, sh1t gets blown up!!'</hint>
+</movie>
+<movie>
+	<name>ROCKY</name>
+	<hint>'Eye of the tiger'</hint>
+</movie>
+<movie>
+	<name>LAYER CAKE</name>
+	<hint>'Daniel Craig in the narcotics trade'</hint>
+</movie>
+<movie>
+	<name>TRAINSPOTTING</name>
+	<hint>''Choose Life, Choose a job, Choose a career, Choose a family</hint>
+</movie>
+<movie>
+	<name>FLIGHT OF THE NAVIGATOR</name>
+	<hint>'So you need ME and my INFERIOR brain to fly that thing?'</hint>
+</movie>
+<movie>
+	<name>PAUL</name>
+	<hint>'What do you know, the geek shall inherit the Earth.'</hint>
+</movie>
+<movie>
+	<name>HOT FUZZ</name>
+	<hint>'Why is everyone here eating chocolate cake?'</hint>
+</movie>
+<movie>
+	<name>SCARFACE</name>
+	<hint>'Tony Montana: You want to play games? Okay, I play with you'</hint>
+</movie>
+<movie>
+	<name>THE GOONIES</name>
+	<hint>'Sloth likes a Baby Ruth'</hint>
+</movie>
+<movie>
+	<name>THE LOST BOYS</name>
+	<hint>'With the Frog brother's and plenty of garlic.. You'll be fine!'</hint>
+</movie>
+<movie>
+	<name>CADDYSHACK</name>
+	<hint>'Gopher's, Golf and Giggles'</hint>
+</movie>
+<movie>
+	<name>UNCLE BUCK</name>
+	<hint>'John Candy scares teenager with hatchet'</hint>
+</movie>
+<movie>
+	<name>RUSH HOUR</name>
+	<hint>'Don't you ever touch a black man's radio'</hint>
+</movie>
+<movie>
+	<name>BIG TROUBLE IN LITTLE CHINA</name>
+	<hint>'Kurt Russel goes oriental'</hint>
+</movie>
+<movie>
+	<name>GREMLINS</name>
+	<hint>'Don't feed them after midnight'</hint>
+</movie>
+<movie>
+	<name>THE TRUMAN SHOW</name>
+	<hint>'In case I don't see ya, Good afternoon, good evening and good night.'</hint>
+</movie>
+<movie>
+	<name>LETHAL WEAPON</name>
+	<hint>'I'm too old for this ..1t'</hint>
+</movie>
+<movie>
+	<name>WHEN HARRY MET SALLY</name>
+	<hint>'I'll have what SHE'S having!'</hint>
+</movie>
+<movie>
+	<name>HOME ALONE</name>
+	<hint>'Watch out for Harry and Marv'</hint>
+</movie>
+<movie>
+	<name>MARY POPPINS</name>
+	<hint>'A spoon full of sugar'</hint>
+</movie>
+<movie>
+	<name>AMERICAN PIE</name>
+	<hint>'Last summer, at Band Camp'</hint>
+</movie>
+<movie>
+	<name>JAWS</name>
+	<hint>'Bigger Boat'</hint>
+</movie>
+<movie>
+	<name>POINT BREAK</name>
+	<hint>'The Ex Presidents'</hint>
+</movie>
+<movie>
+	<name>INCEPTION</name>
+	<hint>'dream whithin a dream within a dream'</hint>
+</movie>
+<movie>
+	<name>THE MATRIX</name>
+	<hint>'Which colour pill?'</hint>
+</movie>
+<movie>
+	<name>THE CANNONBALL RUN</name>
+	<hint>'Captain Chaos'</hint>
+</movie>
+</movienames>

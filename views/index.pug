@@ -6,7 +6,9 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel='stylesheet', type='text/css', href='css/buttons.css')
         link(rel='stylesheet', type='text/css', href='css/profile-style.css')
+        link(rel='stylesheet', type='text/css', href='wordgame/style.css')
         script(src="js/profile.js" defer) 
+        script(src="wordgame/wordgame.js") 
         title Mark Foyster
     body 
         include includes/all-popups.pug
@@ -46,6 +48,9 @@ html(lang="en")
                             li Visual Studio, VS Code, Notepad ++
                     
                 p In the past, I have had a play with CMS including Joomla and Wordpress. I made my own basic CMS using JavaScript, PHP and XML/XSLT for a project about a decade ago.
+                
+                p Bored? Why not play my <button onclick="activateBigPopUp('', 'wordgame')">WORDGAME</button>.
+                
                 #education
                 .education 
                     h3.headings(class="subHeading") EDUCATION

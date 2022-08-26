@@ -48,7 +48,7 @@ function activateContactPopUp(){
     else{
         contactPopupWindow.classList.remove("popupFadeIn");
         contactPopupWindow.classList.add("popupFadeOut");
-        contactPopupStatus = false;
+        contactPopupStatus = false;     
     }
 }
 
@@ -67,6 +67,7 @@ function activateBigPopUp(title, contents = "default"){
             }).then(function(response) {  
                     document.getElementById("popUpBody").innerHTML = response;
                     document.getElementById("popUpTitle").innerHTML = title;
+                    if (contents=="wordgame") {runWordGame();}
             }).catch (function (error){
                 console.log(error);  
                 //noData();
@@ -84,7 +85,13 @@ function activateBigPopUp(title, contents = "default"){
         bigPopUp.classList.remove("popupFadeIn");
         bigPopUp.classList.add("popupFadeOut");
         document.body.classList.remove("stopScrolling"); //re-enable scrolling main window
-        
+        //check if an alert is also active, close it if it is
+        let alertBox = document.getElementById("ourAlertBoxCNT");
+        if(alertBox){
+            if (alertBox.style.visibility == "visible") {
+                alertBox.style.visibility = "hidden";
+            }
+        }
         bigPopUpStatus = false;
     }
 }
