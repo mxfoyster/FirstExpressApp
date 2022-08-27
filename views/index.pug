@@ -121,20 +121,41 @@ html(lang="en")
                     .flexContainer
                         .boxedLink
                             h4.green UNITY PROJECTS
-                            ul 
-                                li 
-                                    a(href="https://github.com/mxfoyster/ModularUnityBits" target="_blank") Modular unity Bits 
-                                li 
-                                    a(href="https://github.com/mxfoyster/PenguinFlyer" target="_blank") Penguin Flyer 
+                            table 
+                                tr 
+                                    td
+                                        span.myLI &bull; 
+                                        a(href="https://github.com/mxfoyster/ModularUnityBits" target="_blank") Modular unity Bits
+                                    td 
+                                        button.new(onclick="activateBigPopUp('Modular Unity Bits', 'modularunity')") MORE INFO
+                                tr 
+                                    td
+                                        span.myLI &bull; 
+                                        a(href="https://github.com/mxfoyster/PenguinFlyer" target="_blank") Penguin Flyer 
+                                    td 
+                                        button.new(onclick="activateBigPopUp('Penguin Flyer', 'penguinflyer')") MORE INFO
+
                         .boxedLink
                             h4.green WINDOWS PROJECTS
-                            ul 
-                                li 
-                                    a(href="https://github.com/mxfoyster/PaddlerData" target="_blank") Paddler Data (.NET WPF)
-                                li 
-                                    a(href="https://github.com/mxfoyster/randomWinApp" target="_blank") Paddle Length Calculator (Win 32)
-                                li 
-                                    a(href="https://github.com/mxfoyster/first_WPF_App" target="_blank") Paddle Length Calculator (.NET WPF) 
+                            table 
+                                tr
+                                    td 
+                                        span.myLI &bull;
+                                        a(href="https://github.com/mxfoyster/PaddlerData" target="_blank") Paddler Data (.NET WPF)
+                                    td
+                                        button.new(onclick="activateBigPopUp('Paddler Data', 'paddlerdata')") MORE INFO
+                                tr
+                                    td 
+                                        span.myLI &bull;
+                                        a(href="https://github.com/mxfoyster/randomWinApp" target="_blank") Paddle Length Calculator (Win 32)
+                                    td 
+                                        button.new(onclick="activateBigPopUp('Paddle Length (C++)', 'paddlelengthcpp')") MORE INFO
+                                tr
+                                    td 
+                                        span.myLI &bull;
+                                        a(href="https://github.com/mxfoyster/first_WPF_App" target="_blank") Paddle Length Calculator (.NET WPF)
+                                    td 
+                                        button.new(onclick="activateBigPopUp('Paddle Length (C#)', 'paddlelengthwpf')") MORE INFO 
                         
                         .boxedLink
                             h4.green WEB PROJECTS
