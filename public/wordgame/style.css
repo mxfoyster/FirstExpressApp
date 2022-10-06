@@ -61,7 +61,7 @@ label, .hardLabel{
 	height: 150px;	
 	visibility: hidden;
 	z-index: 1;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 
 .ourAlertMessage{
